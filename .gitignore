@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Personal workspace data
+workspace/files/*
+workspace/apps/*
+backup/*
+
+# Secrets
+.env
+*.key
+*.pem
+
+# OS files
+Thumbs.db
+.DS_Store

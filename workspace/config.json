@@ -1,0 +1,11 @@
+{
+    "workspace_name": "My College Workspace",
+    "version": "1.0",
+    "platform": "windows",
+    "features": {
+        "wallpaper": true,
+        "files": true,
+        "vscode": true,
+        "browser": true
+    }
+}
