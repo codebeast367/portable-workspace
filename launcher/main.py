@@ -50,13 +50,16 @@ def main():
     print("================================")
     print("1. Capture File")
     print("2. Restore File")
-    print("3. Exit")
+    print("3. Capture Folder")
+    print("4. Restore Folder")
+    print("5. Exit")
     print()
 
     choice = input("Choose an option: ")
 
     if choice == "1":
         print()
+
         source_file = input("Enter the file path: ")
 
         from workspace import capture_file
@@ -74,11 +77,29 @@ def main():
         restore_file(file_name, destination)
 
     elif choice == "3":
+        print()
+
+        source_folder = input("Enter the folder path: ")
+
+        from workspace import capture_folder
+
+        capture_folder(source_folder)
+
+    elif choice == "4":
+        print()
+
+        folder_name = input("Enter the folder name to restore: ")
+        destination = input("Enter the destination folder: ")
+
+        from workspace import restore_folder
+
+        restore_folder(folder_name, destination)
+
+    elif choice == "5":
         print("Exiting Portable Workspace...")
 
     else:
         print("Invalid option.")
-
 
 if __name__ == "__main__":
     main()
