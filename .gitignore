@@ -20,3 +20,5 @@ backup/*
 # OS files
 Thumbs.db
 .DS_Store
+
+tests/capture/captured_workspace/
