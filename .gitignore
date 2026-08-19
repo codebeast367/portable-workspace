@@ -22,3 +22,6 @@ Thumbs.db
 .DS_Store
 
 tests/capture/captured_workspace/
+# Generated capture test outputs
+tests/capture/captured_settings/
+tests/capture/captured_wallpaper/

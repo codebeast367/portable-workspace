@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from config import (
     PROJECT_DIR,
     WORKSPACE_DIR,
@@ -52,7 +57,8 @@ def main():
     print("2. Restore File")
     print("3. Capture Folder")
     print("4. Restore Folder")
-    print("5. Exit")
+    print("5. Capture Directory Contents")
+    print("6. Exit")
     print()
 
     choice = input("Choose an option: ")
@@ -62,7 +68,7 @@ def main():
 
         source_file = input("Enter the file path: ")
 
-        from workspace import capture_file
+        from file_ops import capture_file
 
         capture_file(source_file)
 
@@ -72,7 +78,7 @@ def main():
         file_name = input("Enter the file name to restore: ")
         destination = input("Enter the destination folder: ")
 
-        from workspace import restore_file
+        from file_ops import restore_file
 
         restore_file(file_name, destination)
 
@@ -81,7 +87,7 @@ def main():
 
         source_folder = input("Enter the folder path: ")
 
-        from workspace import capture_folder
+        from file_ops import capture_folder
 
         capture_folder(source_folder)
 
@@ -91,11 +97,22 @@ def main():
         folder_name = input("Enter the folder name to restore: ")
         destination = input("Enter the destination folder: ")
 
-        from workspace import restore_folder
+        from file_ops import restore_folder
 
         restore_folder(folder_name, destination)
 
     elif choice == "5":
+        print()
+
+        source_dir = input("Enter the folder path whose CONTENTS you want to capture: ")
+        folder_name = input("Enter a name to save this capture as: ")
+
+        from workspace.capture.files import capture_files
+
+        destination = FILES_DIR / folder_name
+        capture_files(source_dir, destination)
+
+    elif choice == "6":
         print("Exiting Portable Workspace...")
 
     else:
