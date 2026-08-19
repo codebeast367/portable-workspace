@@ -11,6 +11,7 @@ env/
 workspace/files/*
 workspace/apps/*
 backup/*
+workspace/.security/
 
 # Secrets
 .env
