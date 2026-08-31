@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from config import (
     PROJECT_DIR,
     WORKSPACE_DIR,
@@ -81,8 +86,8 @@ def save_session():
 
     except Exception as error:
         print(f"[ERROR] Could not save session: {error}")
-        
-        
+
+
 def discard_session():
     global active_session
 
@@ -138,7 +143,8 @@ def restore_folder_menu():
     from workspace import restore_folder
 
     restore_folder(folder_name, destination)
-    
+
+
 def create_encrypted_snapshot_menu():
     """Create an encrypted snapshot of the workspace."""
 
