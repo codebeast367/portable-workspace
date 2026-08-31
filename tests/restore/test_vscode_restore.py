@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from launcher.restore.app_detector import ApplicationDetection
+from launcher.restore.app_detector import ApplicationDetector
 from launcher.restore.vscode_restore import VSCodeRestorer
 
 

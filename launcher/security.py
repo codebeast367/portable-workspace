@@ -3,8 +3,6 @@ import hashlib
 import secrets
 from pathlib import Path
 
-from pathlib import Path
-
 from cryptography.fernet import Fernet, InvalidToken
 
 
