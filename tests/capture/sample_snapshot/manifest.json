@@ -1,0 +1,13 @@
+{
+    "workspace_name": "Test Workspace",
+    "applications": [],
+    "files": [
+        "hello.txt",
+        "project"
+    ],
+    "settings": {
+        "vscode": true,
+        "git": true,
+        "terminal": true
+    }
+}
