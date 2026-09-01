@@ -114,7 +114,7 @@ def discard_session():
 def capture_file_menu():
     source_file = input("Enter the file path: ")
 
-    from workspace import capture_file
+    from file_ops import capture_file
 
     capture_file(source_file)
 
@@ -123,7 +123,7 @@ def restore_file_menu():
     file_name = input("Enter the file name to restore: ")
     destination = input("Enter the destination folder: ")
 
-    from workspace import restore_file
+    from file_ops import restore_file
 
     restore_file(file_name, destination)
 
@@ -131,7 +131,7 @@ def restore_file_menu():
 def capture_folder_menu():
     source_folder = input("Enter the folder path: ")
 
-    from workspace import capture_folder
+    from file_ops import capture_folder
 
     capture_folder(source_folder)
 
@@ -140,7 +140,7 @@ def restore_folder_menu():
     folder_name = input("Enter the folder name to restore: ")
     destination = input("Enter the destination folder: ")
 
-    from workspace import restore_folder
+    from file_ops import restore_folder
 
     restore_folder(folder_name, destination)
 
