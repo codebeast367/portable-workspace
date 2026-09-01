@@ -475,14 +475,6 @@ Located at `workspace/config.json`, defines:
 
 ---
 
-## Supported Platforms
-
-- ✅ Windows (10, 11)
-- ✅ macOS (10.12+)
-- ✅ Linux (Ubuntu, Debian, Fedora, etc.)
-
----
-
 ## Known Limitations
 
 - Requires Python to be installed on target computer (for restore operations)
@@ -513,11 +505,6 @@ To contribute improvements:
 
 ---
 
-## License
-
-[Add appropriate license here]
-
----
 
 ## Support & Troubleshooting
 
